@@ -3,10 +3,10 @@ import { SiteData, SiteContextType, SiteConfig, ThemeConfig, PageContent, BlogPo
 
 const defaultData: SiteData = {
   config: {
-    name: "World Class School",
+    name: "Best School",
     tagline: "Shaping Global Minds for a Brighter Future",
-    logoText: "WCS",
-    email: "admissions@worldclass.edu",
+    logoText: "Best",
+    email: "admissions@bestschool.edu",
     phone: "+1 (555) 123-4567",
     address: "123 Academic Avenue, Knowledge City, Global 90210",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d33267b29780!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1611816557671!5m2!1sen!2sus",
@@ -18,7 +18,7 @@ const defaultData: SiteData = {
       whatsapp: "https://wa.me/15551234567",
     },
     seo: {
-      metaTitle: "World Class School - Excellence in Education",
+      metaTitle: "Best School - Excellence in Education",
       metaDescription: "Providing top-tier international education for the leaders of tomorrow.",
     },
   },
@@ -30,11 +30,11 @@ const defaultData: SiteData = {
   },
   content: {
     home: {
-      heroTitle: "World Class School",
+      heroTitle: "Best School",
       heroSubtitle: "Shaping Global Minds for a Brighter Future",
       heroImage: "https://picsum.photos/id/433/1920/1080",
       welcomeTitle: "Welcome to Excellence",
-      welcomeText: "At World Class School, we believe in nurturing the whole child. Our curriculum is designed to challenge students academically while fostering their social and emotional growth. We prepare students not just for university, but for life.",
+      welcomeText: "At Best School, we believe in nurturing the whole child. Our curriculum is designed to challenge students academically while fostering their social and emotional growth. We prepare students not just for university, but for life.",
       programsTitle: "Our Programs",
       programsText: "From Early Years to High School, we offer a continuum of education that meets international standards.",
       stats: [
@@ -92,7 +92,7 @@ const defaultData: SiteData = {
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);
 
-export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const SiteProvider = ({ children }: { children: React.ReactNode }) => {
   const [data, setData] = useState<SiteData>(() => {
     const saved = localStorage.getItem('siteData');
     return saved ? JSON.parse(saved) : defaultData;

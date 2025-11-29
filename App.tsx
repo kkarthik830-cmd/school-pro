@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <SiteProvider>
       <Router>
