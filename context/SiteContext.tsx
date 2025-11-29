@@ -92,7 +92,7 @@ const defaultData: SiteData = {
 
 const SiteContext = createContext<SiteContextType | undefined>(undefined);
 
-export const SiteProvider = ({ children }: { children: React.ReactNode }) => {
+export const SiteProvider = ({ children }: { children?: React.ReactNode }) => {
   const [data, setData] = useState<SiteData>(() => {
     const saved = localStorage.getItem('siteData');
     return saved ? JSON.parse(saved) : defaultData;

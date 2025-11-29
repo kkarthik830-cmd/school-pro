@@ -10,7 +10,7 @@ import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children?: React.ReactNode }) => {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith('/admin');
 
